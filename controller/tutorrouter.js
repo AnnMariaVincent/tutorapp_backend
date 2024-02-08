@@ -10,5 +10,11 @@ router.post("/add",async(req,res)=>{
         status:"success"
     })
 })
+    router.post("/search",async(req,res)=>{
+        let input=req.body
+        let data=await tutorModel.find(input)
+        res.json(data)
+    
+})
 
 module.exports=router
