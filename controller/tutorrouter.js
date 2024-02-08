@@ -16,5 +16,11 @@ router.post("/add",async(req,res)=>{
         res.json(data)
     
 })
+router.get("/viewall",async(req,res)=>{
+    let data=await tutorModel.find()
+    res.json(data)
+})
+
+
 
 module.exports=router
